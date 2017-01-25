@@ -9,10 +9,10 @@
   <h2>Custom Pipe</h2>
   <input type="text" #input (keyup)="0">
   <p>{{input.value | double}}</p>
-  <input type="text" #newItem>
+  <input type="text" #newItem [(ngModel)]="searchText">
   <button (click)="values.push(newItem.value)" class="btn btn-primary">Add Item</button>
   <ul>
-    <li *ngFor="let item of values | filter:'ea'">{{item}}</li>
+    <li *ngFor="let item of values | filter: searchText">{{item}}</li>
   </ul>
 
   <hr>

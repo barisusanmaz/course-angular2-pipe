@@ -14,6 +14,7 @@ import {DoublePipe} from "./double.pipe";
 export class AppComponent {
   myValue = 'lowercase';
   myDate = new Date(2016, 5, 24);
+  searchText = "";
 
   values = ['Milk', 'Bread', 'Beans']
   asyncValue = new Promise((resolve, reject) => {
